@@ -1,8 +1,8 @@
-<h1>Doodle Paint5 for Pokki</h1>
-Doodle Paint5 is a simple HTML5 painting program that uses the Canvas element and mootools JavaScript library.
-It runs on the Pokki appstore (http://pokki.com)
+<h1>Product-Code</h1>
+The code in this repo can guide users to use roboteurs products over a number of diffrent platforms
+(http://Roboteurs.com)
  
-<h2>Important source files</h2>
+<h2>Product-Index</h2>
 app.js - Main js entrypoint for Doodle Paint<br />
 popup.js - Pokki popup wrapper<br />
 window.html - HTML entrypoint for Doodle Paint<br />
