@@ -8,5 +8,4 @@ SM - Sensor modules/breakout boards<br />
 MD - Motor driver products<br />
 
 <br />
-ToolBase.js - Abstract base class for painting Tools<br />
-*****Tool.js - Painting tool implementations, pencil, brush, circle, spray, etc.<br />
+
