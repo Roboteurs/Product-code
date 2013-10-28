@@ -13,5 +13,8 @@ sudo i2cset -f -y 1 0x6b 0x2a 0xff
 # read sensor data from adresses 0x01 - 0x06
 sudo i2cget -f -y 1 0x6b 0x28
 
-# read the temprature from adress 0x26
-sudo i2cget -f -y 0x6b 0x26
+while :
+do
+	# read the temprature from adress 0x26
+	sudo i2cget -f -y 0x6b 0x26
+done
