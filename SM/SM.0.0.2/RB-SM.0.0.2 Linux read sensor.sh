@@ -5,12 +5,12 @@ sudo apt-get install i2c-tools
 sudo i2cdetect -r 1
 
 # check the device ID
-sudo i2cget -f -y 1 0x6b 0x20
+sudo i2cget -f -y 1 0x6b 0x0f
 
 # enable the sensor at max sampling rate
-sudo i2cset -f -y 1 0x6b 0x2a 0xff
+sudo i2cset -f -y 1 0x6b 0x20 0xff
 
-# read sensor data from adresses 0x01 - 0x06
+# read sensor data from adresses 0x28 - 0x2D
 sudo i2cget -f -y 1 0x6b 0x28
 
 while :
