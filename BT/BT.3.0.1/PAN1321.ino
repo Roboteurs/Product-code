@@ -18,7 +18,7 @@ to use the bluetooth module
 void setup_PAN1321() {  
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);
-
+fv vuo   
   // initialize RTS and CTS respectivley
   pinMode(RTS, OUTPUT);
   pinMode(CTS, INPUT);
@@ -71,8 +71,18 @@ void SendChar_Bluetooth(char currentsend){
 '''
 SendGet_Bluetooth: get a single character from bluetooth
 '''
-void GetChar_Bluetooth(char currentsend){
-  // what to do.... hmmm. 
+char GetChar_Bluetooth(){
+  // clear the BT module to send last string
+  digitalWrite(RTS, LOW)
+  while (Serial.available()) {
+
+    // read until the deliminator shows up
+    if ((char)Serial.read() == ',') {
+      digitalWrite(RTS, HIGH);
+      return((char)Serial.read());
+      break;
+    }
+  }
 }
 
 #endif
