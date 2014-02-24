@@ -1,11 +1,11 @@
-#!/usr/bin/python
+# Author: Reiner Schmidt
 #
 # Based on adafruits raspberry pi CharLCD.py
 #
 # based on code from lrvick and LiquidCrystal
 # lrvic - https://github.com/lrvick/raspi-hd44780/blob/master/hd44780.py
 # LiquidCrystal - https://github.com/arduino/Arduino/blob/master/libraries/LiquidCrystal/LiquidCrystal.cpp
-#
+
 
 from time import sleep
 
@@ -56,8 +56,7 @@ class Beaglbone_CharLCD:
 
 
     def __init__(self, pin_rs="GPIO1_7", pin_e="GPIO1_3", pins_db=["GPIO2_2", "GPIO2_3", "GPIO2_5", "GPIO2_4"], GPIO = None):
-	# Emulate the old behavior of using RPi.GPIO if we haven't been given
-	# an explicit GPIO interface to use
+
 	if not GPIO:
 	    import Adafruit_BBIO.GPIO as GPIO
    	self.GPIO = GPIO
@@ -252,10 +251,3 @@ class Beaglbone_CharLCD:
             else:
                 self.write4bits(ord(char),True)
 
-
-if __name__ == '__main__':
-
-    lcd = Adafruit_CharLCD()
-
-    lcd.clear()
-    lcd.message("  Adafruit 16x2\n  Standard LCD")
