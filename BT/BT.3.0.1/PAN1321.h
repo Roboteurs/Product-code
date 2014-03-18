@@ -28,7 +28,7 @@ void Init_Bluetooth() {
   pinMode(CTS, INPUT);
 
   // set RTS high
-  digitalwrite(RTS, HIGH);  
+  digitalWrite(RTS, HIGH);  
   digitalWrite(RTS, LOW);
   
   delay(2000);
